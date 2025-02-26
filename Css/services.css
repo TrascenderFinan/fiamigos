@@ -1,0 +1,812 @@
+.container {
+  max-width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1;
+}
+.contact_section {
+  flex-grow: 1;
+}
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+  color: #2e2e2d;
+}
+
+.navbar-brand img {
+  width: 45px;
+  margin-right: 5px;
+}
+
+.navbar-brand span {
+  font-size: 20px;
+  font-weight: 700;
+  color: inherit;
+  margin-top: 5px;
+}
+.header_section {
+  background-color: #052E64; /* Fondo para toda la sección del encabezado */
+}
+
+.navbar-brand img.logo_empresa {
+  width: 400px; /* Ajusta el ancho del logo */
+  height: auto; /* Mantén la proporción del logo */
+  margin-right: 10px;
+}
+
+.navbar-toggler {
+  background-color: transparent; /* Botón de menú transparente */
+  border: none; /* Sin borde */
+}
+
+.navbar-toggler img {
+  width: 30px; /* Tamaño de la imagen del menú */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff !important; /* Color del texto */
+  font-size: 18px;
+  padding: 0; /* Elimina padding extra */
+  margin: 0 15px; /* Espaciado entre elementos */
+  line-height: 40px; /* Asegura que los elementos estén centrados verticalmente */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #27CFEC !important; /* Color del texto al pasar el cursor */
+}
+
+/* Estilos para el logo dentro del enlace "Pagos Pse" */
+.navbar-nav .nav-item .nav-link img {
+  width: 40px; /* Tamaño del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Alinear elementos de la barra de navegación */
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Espacio entre elementos */
+  display: flex;
+  align-items: center;
+  position: relative; /* Asegura que los seudoelementos estén posicionados correctamente */
+}
+
+.navbar-nav .nav-item::after {
+  content: "|"; /* Contenido del seudoelemento */
+  position: absolute; /* Posición absoluta respecto al elemento padre */
+  top: 50%; /* Alineación vertical centrada */
+  right: -8px; /* Ajuste de posición para la línea vertical */
+  transform: translateY(-50%); /* Centrado vertical */
+  color: #ffffff; /* Color de la línea */
+}
+
+/* Ajuste para el último elemento */
+.navbar-nav .nav-item:last-child::after {
+  display: none; /* Oculta la línea vertical en el último elemento */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* Color de fondo del menú */
+  padding: 5px;
+  left: -10px; /* Ajusta la posición del menú hacia la izquierda */
+  top: calc(70% + 10px); /* Ajusta la posición del menú hacia abajo */
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #060606; /* Color de texto */
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 14px; /* Ajusta el tamaño del texto */
+  z-index: 50;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ffffff; /* Color de fondo al pasar el cursor */
+  color:#27CFEC; /* Cambia el color del texto al pasar el cursor */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* Estilos para el título "Nuestros Servicios" */
+.custom_heading {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #2e2e2d;
+  transition: color 0.3s;
+}
+
+/* Cambiar color del título al pasar el cursor */
+.custom_heading:hover {
+  color: #115d9f;
+}
+
+/* Estilos para el texto debajo del título */
+.custom_heading-text {
+  font-size: 16px;
+  margin-bottom: 50px;
+  text-align: justify;
+  color: #555;
+}
+
+/* Estilos para los márgenes y el espaciado de los elementos en la sección */
+.service_section {
+  padding: 50px 0;
+}
+
+.layout_padding2 {
+  margin-top: 30px;
+}
+
+.card-deck {
+  margin-top: 20px;
+}
+
+/* Estilos para las tarjetas */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color:#023766; /* Color de la línea */
+  transition: width 0.3s ease; /* Transición suave de la anchura */
+}
+
+.card:hover::before {
+  width: 100%; /* Ancho completo al pasar el cursor */
+}
+
+.card-img-top {
+  width: 30px; /* Ancho deseado */
+  height: auto; 
+  margin-left: 5px;/* Altura automática para mantener la proporción */
+}
+.btn-custom {
+  background-color:#023766; /* Cambia esto por el color que prefieras */
+  border-color: #023766; /* Cambia esto por el color que prefieras */
+  color: #fff; /* Color del texto */
+}
+.btn-custom:hover {
+  background-color: #27CFEC;
+  border-color: #27CFEC;
+  color:#ffffff ; /* Color del texto */
+}
+.icon-check {
+  color: #27CFEC; /* Cambia esto por el color que prefieras */
+}
+
+/* Estilos para el botón de WhatsApp flotante */
+.whatsapp_float {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+}
+
+.whatsapp_float a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.whatsapp_icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Estilos para la sección de preguntas frecuentes */
+.faq_section_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinea el contenido al inicio del contenedor verticalmente */
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.faq_image_container {
+  flex: 0 0 600px; /* Ajusta el ancho de la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq_image {
+  max-width: 90%;
+  border-radius: 10px;
+}
+.faq_item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.introduction_text {
+  font-size: 18px;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.question {
+  background-color: #023766;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-start; /* Alinea el contenido al inicio del contenedor */
+  align-items: center; /* Centra verticalmente el contenido */
+  transition: background-color 0.3s ease;
+}
+
+.question .icono_desplegar {
+  margin-right: 10px; /* Ajusta el margen derecho del icono */
+}
+
+.question:hover {
+  background-color: #5a6268;
+}
+
+.answer {
+  display: none;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.5s ease; /* Agregar transiciones */
+  max-height: 0;
+  opacity: 0;
+}
+
+.active .answer {
+  display: block;
+  max-height: 500px; /* Ajusta según la longitud de la respuesta */
+  opacity: 1;
+}
+
+.faq_item .question i {
+  transition: transform 0.3s;
+}
+
+.faq_item.active .question i {
+  transform: rotate(180deg);
+}
+
+.icono_desplegar {
+  margin-left: 10px;
+}
+
+/* Estilos para la sección "Quiénes Somos" */
+
+.section {
+  padding: 50px 0;
+}
+
+.container {
+  width: 90%; /* Aumenta el ancho del contenedor */
+  margin: 0 auto;
+}
+
+.section_title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  transition: color 0.3s ease;
+  margin-top: -50px;
+}
+/* vision */
+.section_titles {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  transition: color 0.3s ease;
+  margin-top: -140px;
+}
+
+.section_title:hover {
+  color: #115d9f;
+}
+
+.about_section {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.section_titles:hover {
+  color: #115d9f;
+}
+
+.column {
+  display: flex;
+  flex-direction: column; /* Cambia a disposición en fila */
+  align-items: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.col-6 {
+  flex: 0 0 48%; /* Aumenta el ancho de las columnas */
+  max-width: 48%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.about_image {
+  width: 200%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+  margin-left: -250px;
+}
+
+.about_paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  width: 200%;
+  text-align: justify;
+  border-top: 1px solid #023766;
+  border-bottom: 1px solid #023766;
+  padding: 15px ;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: -250px;
+  margin-top: -50px;
+}
+
+.about_paragraph:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.values_section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  margin-top: -70px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.values_section {
+    padding: 50px 0;
+    background:white;
+    color: #ffffff; /* Color del texto */
+    text-align: center;
+}
+
+.value_card {
+  background: linear-gradient(to bottom,#023766, #a5c9e6); /* Degradado azul */
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.value_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.value_icon {
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.value_card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.value_card p {
+  font-size: 16px;
+  color: #181818;
+}
+
+.line {
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 20px auto 0;
+}
+
+
+/* Sección de pagos */
+.pagos_section {
+  padding: 50px 0; /* Ajusta el relleno según sea necesario */
+  background-color: #f7f7f7;
+  margin-top: 70px;
+}
+
+.pagos_section h2 {
+  font-weight: bold; /* Pone el texto en negrita */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  display: inline-block; /* Para que el borde se ajuste al contenido */
+  position: relative; /* Permite posicionar la línea decorativa */
+}
+
+#titulo:hover {
+  color: #115d9f; /* Cambia el color del texto al pasar el cursor sobre el título */
+}
+
+.pagos_section form {
+  margin-top: 20px; /* Espacio arriba del formulario */
+}
+
+.pagos_section form input[type="text"] {
+  width: 300px; /* Ajusta el ancho del campo de texto según sea necesario */
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+  margin-right: 10px; /* Espacio a la derecha del campo de texto */
+}
+
+.pagos_section form button {
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  background-color: #023766; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Quita el borde del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.pagos_section img {
+  max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+  margin-top: 20px; /* Espacio arriba de la imagen */
+}
+
+/* Estilos para la sección de contacto */
+/* Estilos para la sección de contacto */
+.contact_section {
+  background: url('../Img/cont.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 30px 0; /* Añade padding arriba y abajo para mejor legibilidad */
+}
+
+.contact_section .container {
+  max-width: 80%; /* Ajusta el ancho del container según sea necesario */
+  margin-right: auto;
+}
+
+.contact_section .text-justify {
+  color: #023766;
+  font-size: 1.5rem;
+  font-weight: bold; /* Ajusta el tamaño y el peso de la fuente */
+  text-align: justify; /* Justifica el texto */
+  padding: 20px;
+  max-width: 80%; /* Ajusta el ancho máximo del contenido */
+  margin-bottom: 20px; /* Espacio inferior para separar el texto del formulario */
+}
+
+.contact_section .col-md-5,
+.contact_section .col-md-7 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.contact_section .card {
+  background-color: #fff;
+  color: #000;
+}
+
+.contact_section .form-group label {
+  color: #000;
+}
+
+.contact_section .btn-primary {
+  background-color: #023766;
+  border: none;
+}
+
+.contact_section .btn-primary:hover {
+  background-color: #115d9f;
+}
+
+
+
+
+.contact_card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.contact_card .card-title {
+    font-weight: 700;
+}
+
+.contact_card .card-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.social_icons a {
+    color: #000;
+    transition: color 0.3s;
+}
+
+.social_icons a:hover {
+    color: #023766;
+}
+
+.map-container {
+  background-color: transparent !important;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* Estilos para el pie de página */
+.header_section, .content, .footer_section {
+  flex-shrink: 0;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.footer_section {
+  background-color: #000000; 
+  color:white;/* Ajusta el color de fondo del footer según tu diseño */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer_section p {
+  margin: 0;
+}
+.footer_contact ul,
+.footer_social ul {
+  padding: 0; /* Elimina el relleno */
+  list-style: none; /* Elimina los estilos de lista */
+}
+
+.footer_contact ul li,
+.footer_social ul li {
+  margin-bottom: 10px; /* Añade espaciado entre los elementos de la lista */
+}
+
+.footer_social ul li {
+  display: inline-block; /* Muestra los elementos de la lista en línea */
+  margin-right: 10px; /* Añade espaciado entre los iconos de redes sociales */
+}
+
+.footer_social ul li a {
+  color: #ffffff; /* Cambia el color de los enlaces a redes sociales */
+}
+
+.footer_social ul li a:hover {
+  color: #115d9f; /* Cambia el color al pasar el cursor sobre los enlaces a redes sociales */
+}
+.news-title {
+ text-align: center;
+ font-weight: bold;
+}
+
+.news-title:hover{
+  color:#115d9f ;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .faq_section_container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .faq_section {
+      margin-right: 0;
+  }
+
+  .faq_image_container {
+      margin-top: 20px;
+  }
+
+  .introduction_text,
+  .question,
+  .answer {
+      font-size: 16px;
+  }
+  .navbar-nav .nav-item::after {
+    display: none;
+      }
+}
+
+@media (max-width: 768px) {
+  .introduction_text,
+  .question,
+  .answer {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .introduction_text,
+  .question,
+  .answer {
+      font-size: 12px;
+  }
+
+  .faq_image {
+      width: 90%;
+  }
+
+  
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .contact_section {
+      background: none;
+      text-align: center;
+  }
+  
+  .map_section {
+      display: none;
+  }
+  
+  .contact_section .container {
+    max-width: 80%; /* Ajusta el ancho del container según sea necesario */
+    margin-left: 50px;
+    margin-right: auto;
+    top: 100px;
+  }
+  .contact_section .text-center {
+   color: transparent;
+  }
+  @media (max-width: 768px) {
+    .contact_section .text-justify {
+      color:#023766;
+      font-size: 1.2rem;
+      font-weight: bold; /* Ajusta el tamaño y el peso de la fuente */
+      text-align: justify; /* Justifica el texto */
+      padding: 20px;
+      max-width: 80%; /* Ajusta el ancho máximo del contenido */
+      margin-bottom: 20px; /* Espacio inferior para separar el texto del formulario */
+    }
+  
+}
+}
+@media (max-width: 768px) {
+  .column {
+      flex-direction: column;
+  }
+
+  .col-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .col-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .about_image {
+      width: 90%;
+      margin: 0 auto 20px;
+  }
+  .about_paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+    text-align: justify;
+    border-top: 1px solid #023766;
+    border-bottom: 1px solid #023766;
+    padding: 15px ;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 0px;
+    margin-top: -50px;
+  }
+}
+/* Media query para pantallas mayores a 1300px */
+@media screen and (min-width: 1600px) {
+  .service_section .container {
+    max-width: 70%;
+    margin-top: 200px;
+}
+.contact_section .container {
+  max-width: 70%;
+  margin-bottom: 0;
+  margin-top: 300px;
+}
+
+
+  .faq_section_container {
+    margin-top: 120px; /* Ajusta el valor según tus necesidades */
+}
+
+/* Si prefieres usar padding */
+.faq_section_container {
+    padding-top: 50px; /* Ajusta el valor según tus necesidades */
+}
+.service_details_section {
+  margin-top: 300px; /* Ajusta el valor según tus necesidades */
+}
+}

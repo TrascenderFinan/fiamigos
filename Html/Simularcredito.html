@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simular Crédito</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="../Css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="hero_area sub_pages">
+        <header class="header_section">
+            <div class="navbar-container">
+              <div class="container">
+                <nav class="navbar navbar-expand-md navbar-dark">
+                  <a class="navbar-brand" href="index.html">
+                    <img src="../Img/logofiamigos2.jpg" alt="Logo de la empresa" class="logo_empresa">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../Img/menu.png" alt="Menú desplegable">
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Sobrenosotros.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link" href="service.html" id="navbarDropdown" role="button" aria-haspopup="true"
+                          aria-expanded="false">
+                          Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="creditopersonal.html">Créditos Personales</a></li>
+                          <li><a class="dropdown-item" href="creditoslibranza.html">Créditos por Libranza</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="mapa.html">Oficinas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Preguntas.html">Preguntas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contacto</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </header>
+          <section class="simular_credito_section">
+            <br>
+            <h2>Simular Crédito</h2>
+            <div class="container">
+                <p>Esta calculadora simula diferentes escenarios de crédito adaptando la mejor opción para ti. Utiliza los controles deslizantes o ingresa valores manualmente:</p>
+        
+                <div class="row">
+                    <!-- Plazo del Crédito -->
+                    <div class="col-md-4">
+                        <label for="plazo">Plazo (meses):</label>
+                        <input type="range" id="plazo" name="plazo" min="6" max="60" value="12" step="1" class="form-control-range">
+                        <input type="number" id="plazoInput" class="form-control mt-2" min="6" max="60" value="12">
+                        <p>Plazo: <span id="plazoSeleccionado">12 meses</span></p>
+                    </div>
+        
+                    <!-- Valor del Crédito -->
+                    <div class="col-md-4">
+                        <label for="valor">Valor ($):</label>
+                        <input type="range" id="valor" name="valor" min="500000" max="10000000" value="2000000" step="50000" class="form-control-range">
+                        <input type="number" id="valorInput" class="form-control mt-2" min="500000" max="10000000" step="50000" value="2000000">
+                        <p>Valor: <span id="valorSeleccionado">$2,000,000</span></p>
+                    </div>
+        
+                    <!-- Cálculo de la Cuota -->
+                    <div class="col-md-4">
+                        <label for="cuota">Valor cuota ($):</label>
+                        <input type="text" id="cuota" name="cuota" readonly class="form-control">
+                        <button class="btn btn-primary mt-3" id="calcularBtn">Calcular</button>
+                        <a href="../Pdf/CONOCIMIENTO DEL CLIENTE-CREDITO.pdf" download="CONOCIMIENTO DEL CLIENTE-CREDITO.pdf" class="btn btn-success mt-3" id="descargarBtn">Descargar Solicitud</a>
+                         <!-- Notificación de advertencia -->
+    <div id="mensajeAviso" class="alert alert-warning mt-3" role="alert" style="display: none;">
+      ⚠ El valor de esta cuota es un aproximado y está sujeto a cambios en la tasa de interés mensual. 
+      La tasa definitiva se indicará en el momento del estudio del crédito.
+  </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+
+<footer class="footer_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; 2025 Todos los derechos reservados por Fi-amigos SAS</p>
+      </div>
+      <div class="col-md-6">
+        <div class="footer_contact">
+          <ul>
+            <li><i class="fa fa-envelope"></i> contacto@fiamigos.com</li>
+            <li><i class="fa fa-phone"></i> 018000417878 </li>
+          </ul>
+        </div>
+        <div class="footer_social">
+          <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=61572142047156&locale=es_LA"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <!-- <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>-->
+            <li><a href="https://www.instagram.com/fiamigos?igsh=MWFmZm9jZXhzYmpqaw=="><i class="fab fa-instagram"></i> Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <script src="../Js/credito.js"></script>
+        <script src="../Js/carrusel.js"></script>
+    </body>
+    
+    </html>
+    

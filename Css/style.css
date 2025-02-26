@@ -1,0 +1,965 @@
+
+.container {
+  max-width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1;
+}
+.header_section {
+  background-color: #052E64; /* Fondo para toda la sección del encabezado */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+  color: #2e2e2d;
+}
+
+.navbar-brand img {
+  width: 45px;
+  margin-right: 5px;
+}
+
+.navbar-brand span {
+  font-size: 20px;
+  font-weight: 700;
+  color: inherit;
+  margin-top: 5px;
+}
+
+.navbar-brand img.logo_empresa {
+  width: 400px; /* Ajusta el ancho del logo */
+  height: auto; /* Mantén la proporción del logo */
+  margin-right: 10px;
+}
+
+.navbar-toggler {
+  background-color: transparent; /* Botón de menú transparente */
+  border: none; /* Sin borde */
+}
+
+.navbar-toggler img {
+  width: 30px; /* Tamaño de la imagen del menú */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff !important; /* Color del texto */
+  font-size: 18px;
+  padding: 0; /* Elimina padding extra */
+  margin: 0 15px; /* Espaciado entre elementos */
+  line-height: 40px; /* Asegura que los elementos estén centrados verticalmente */
+}
+
+
+/* Estilos para el logo dentro del enlace "Pagos Pse" */
+.navbar-nav .nav-item .nav-link img {
+  width: 40px; /* Tamaño del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #27CFEC!important; /* Color del texto al pasar el cursor */
+}
+
+/* Alinear elementos de la barra de navegación */
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Espacio entre elementos */
+  display: flex;
+  align-items: center;
+  position: relative; /* Asegura que los seudoelementos estén posicionados correctamente */
+}
+
+.navbar-nav .nav-item::after {
+  content: "|"; /* Contenido del seudoelemento */
+  position: absolute; /* Posición absoluta respecto al elemento padre */
+  top: 50%; /* Alineación vertical centrada */
+  right: -8px; /* Ajuste de posición para la línea vertical */
+  transform: translateY(-50%); /* Centrado vertical */
+  color: #ffffff ; /* Color de la línea */
+}
+
+/* Ajuste para el último elemento */
+.navbar-nav .nav-item:last-child::after {
+  display: none; /* Oculta la línea vertical en el último elemento */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* Color de fondo del menú */
+  padding: 5px;
+  left: -10px; /* Ajusta la posición del menú hacia la izquierda */
+  top: calc(70% + 10px); /* Ajusta la posición del menú hacia abajo */
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #060606; /* Color de texto */
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 14px; /* Ajusta el tamaño del texto */
+  z-index: 50;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ffffff; /* Color de fondo al pasar el cursor */
+  color:#27CFEC; /* Cambia el color del texto al pasar el cursor */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.simular_credito_section .container {
+  max-width: 900px; /* Limita el ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 40px; /* Agrega relleno al contenedor */
+  border-radius: 10px; /* Añade bordes redondeados */
+  background-color: #effbfd; /* Cambia el color de fondo */
+}
+
+.simular_credito_section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: #2e2e2d;
+  transition: color 0.3s;
+}
+
+.simular_credito_section h2:hover {
+  color: #115d9f; /* Cambia el color del texto a azul al pasar el cursor */
+}
+
+.simular_credito_section .row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+}
+
+.simular_credito_section .col-md-4 {
+  flex: 0 0 33.333%; /* Establece el ancho de cada columna al 33.333% */
+  max-width: 33.333%; /* Establece el ancho máximo de cada columna */
+}
+
+.simular_credito_section label,
+.simular_credito_section p {
+  font-size: 18px; /* Reduce el tamaño del texto */
+}
+
+.simular_credito_section input[type="range"] {
+  width: 100%; /* Ajusta el ancho del control deslizante al 100% */
+}
+
+.simular_credito_section p span {
+  font-weight: bold;
+}
+
+.simular_credito_section button {
+  margin-top: 30px; /* Aumenta el espacio superior */
+  padding: 10px 20px; /* Aumenta el relleno */
+  font-size: 16px;
+  background-color: #023766; /* Cambia el color de fondo a azul */
+  border: none; /* Elimina borde */
+  border-radius: 3px; /* Agrega bordes redondeados */
+  color: #fff; /* Cambia el color del texto a blanco */
+  transition: background-color 0.3s; /* Agrega transición al cambiar el color de fondo */
+}
+
+/* Cambia color del botón al pasar el cursor */
+.simular_credito_section button:hover {
+  background-color:#27CFEC; /* Color azul más claro */
+}
+
+/* Estilos para la sección de noticias */
+
+/* Estilos para las tarjetas */
+.service_section {
+  padding: 60px 0;
+  background-color: #ffffff; /* Fondo gris suave */
+  background-image: url('../Img/3.png'); /* Ruta de tu imagen de fondo */
+  background-size: 80%; /* Ajusta la imagen para cubrir toda la sección */
+  background-position: center bottom 20px; /* Ajusta la posición de la imagen hacia abajo y ligeramente arriba */
+  background-repeat: no-repeat;
+  margin-top: -60px;
+}
+
+  /* Ruta de tu imagen de fondo */ /* Fondo de color clarito */
+
+
+.service_section .card {
+  border: none; /* Sin borde */
+  transition: transform 0.3s ease; /* Efecto de transición al hacer hover */
+  align-items: center; /* Centrar verticalmente */
+  background-color: #eaeaea; /* Color de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+
+}
+
+/* Estilos para hacer hover sobre las tarjetas */
+.service_section .card:hover {
+  transform: translateY(-5px); /* Efecto de levantamiento */
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.service_section .card .card-img-top {
+  width: 100%; /* Ancho completo */
+  height: auto; /* Mantener la relación de aspecto original */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Estilos para el título de las tarjetas */
+.service_section .card .card-title {
+  font-weight: bold; /* Negrita */
+}
+
+/* Estilos para el botón 'Leer más' */
+.service_section .custom_dark-btn {
+  margin-top: 20px; /* Espacio superior */
+  padding: 10px 20px; /* Relleno interno */
+  background-color: #023766; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Efecto de transición al hacer hover */
+}
+
+/* Estilos para el título de la sección */
+.service_section h2.custom_heading {
+  text-align: center; /* Centrar el texto */
+  font-weight: bold; /* Negrita */
+  color: #2e2e2d; /* Color del texto */
+  transition: color 0.3s; /* Efecto de transición al hacer hover */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para el título de la sección al hacer hover */
+.service_section h2.custom_heading:hover {
+  color:#115d9f;; /* Cambio de color al hacer hover */
+}
+
+/* Estilos para el texto de la sección */
+.custom_heading-text {
+  text-align: center; /* Centrar el texto */
+}
+.button-container {
+  text-align: center;
+  margin-top: 20px; 
+  ;/* boton de seccion de noticias */
+}
+
+/* Estilos para el pie de página */
+
+.footer_section {
+  background-color: #000000; /* Cambia el color de fondo del footer */
+  color: #ffffff; /* Cambia el color del texto del footer */
+  padding: 50px 0; /* Ajusta el espaciado interno */
+  margin-top: 100px; /* Espaciado superior para separarlo del contenido */
+}
+
+
+.footer_section p {
+  margin: 0; /* Elimina el margen */
+}
+
+.footer_contact ul,
+.footer_social ul {
+  padding: 0; /* Elimina el relleno */
+  list-style: none; /* Elimina los estilos de lista */
+}
+
+.footer_contact ul li,
+.footer_social ul li {
+  margin-bottom: 10px; /* Añade espaciado entre los elementos de la lista */
+}
+
+.footer_social ul li {
+  display: inline-block; /* Muestra los elementos de la lista en línea */
+  margin-right: 10px; /* Añade espaciado entre los iconos de redes sociales */
+}
+
+.footer_social ul li a {
+  color: #ffffff; /* Cambia el color de los enlaces a redes sociales */
+}
+
+.footer_social ul li a:hover {
+  color: #023766; /* Cambia el color al pasar el cursor sobre los enlaces a redes sociales */
+}
+
+
+/* Slider */
+
+/* Container for the slider and quick access buttons */
+
+
+/* Slider */
+.slide {
+  position: relative;
+  width: 60%;
+  margin-left:20px;
+  margin-top: 20px; 
+  margin-right: 30px;
+}
+
+.slide-inner {
+  position: relative;
+  overflow: hidden;
+  width: 120%;
+  height: 572px; /* ajustar la altura d elas imagenes del slider */
+
+}
+
+.slide-open:checked + .slide-item {
+  position: static;
+  opacity: 100;
+}
+
+.slide-item {
+  position: relative;
+}
+
+.slide-item h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(238, 234, 233);
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.slide-item {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.slide-item img {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover; /* */
+}
+
+.slide-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.slide-control.prev {
+  left: 2%;
+}
+
+.slide-control.next {
+  right: 3%;
+}
+
+.slide-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+  display: block;
+}
+
+.slide-indicador {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.slide-indicador li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slide-circulo {
+  color: #828282;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.slide-circulo:hover {
+  color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+   li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+    li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+    li:nth-child(3) .slide-circulo {
+  color: #023766;
+}
+
+
+
+.slider-and-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.info-card {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 30px;
+  width: 300px;
+  height: 146px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 0px; /* Espacio entre tarjetas */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: inherit; /* Mantiene el color del texto */
+}
+
+.info-card img {
+  margin-top: 10px;
+  width: 90px;
+  height: auto;
+}
+.info-card .pse-logo {
+  margin-top: 10px;
+  width: 140px;
+  height: auto;
+}
+.info-card .lo {
+  margin-top: 10px;
+  width: 75px;
+  height: auto;
+  margin-left: 45px;
+}
+.info-card .lgo {
+  margin-top: 10px;
+  width: 97px;
+  height: auto;
+  margin-left: 20px;
+}
+.info-card h3 {
+  margin: 0;
+  font-size: 23px;
+  color: #111010;
+  text-decoration: none;
+}
+
+.info-card .decorator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-right: 20px solid #023766;
+  border-bottom: 20px solid transparent;
+}
+
+.banner {
+  position: relative;
+  z-index: 0;
+  width: 210px;
+  height: 150px;
+  margin-top: 0px;
+  margin-left: -226px;
+
+}
+
+.banner img {
+  width: 270%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+.whatsapp_float {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+}
+
+.whatsapp_float a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.whatsapp_icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* Sección de servicios */
+/* Estilos para la sección de servicios */
+.our_services {
+  padding: 60px 0;
+  background-color: #ffffff; /* Fondo gris suave */
+  background-image: url('../Img/2.png'); /* Ruta de tu imagen de fondo */
+  background-size: 90%; /* Ajusta la imagen para cubrir toda la sección */
+  background-position: center; /* Centra la imagen en la sección */
+  background-repeat: no-repeat; /* Evita repetir la imagen */
+  margin-top: -50px;
+}
+
+.services_heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  transition: color 0.3s; /* Agrega una transición de color */
+}
+
+.services_heading:hover {
+  color: #115d9f; /* Cambia el color al pasar el cursor */
+}
+.services_motivation {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px; /* Espacio inferior para separarlo de las tarjetas de servicios */
+  color: #060606; /* Color de texto gris oscuro */
+}
+
+.services_card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.services_card {
+  position: relative;
+  flex: 1 1 calc(33.333% - 20px);
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fondo blanco para las tarjetas */
+  padding: 20px; /* Espacio interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out; /* Efecto de transición */
+  
+}
+.services_card:hover {
+  transform: translateY(5px); /* Mover la tarjeta hacia arriba al pasar el cursor */
+}
+
+.services_card-icon {
+  font-size: 50px;
+  color:#023766; /* Nuevo color para el ícono */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px; /* Ajusta la posición del ícono para que sobresalga */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff; /* Fondo blanco para ocultar el corte del ícono */
+  border: 1px solid #023766; /* Borde alrededor del círculo */
+  border-radius: 50%; /* Redondear el ícono */
+  padding: 15px; /* Espacio interno para el ícono */
+}
+
+.services_card-body {
+  text-align: center;
+  margin-top: 50px; /* Margen superior para el texto */
+}
+
+.services_card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.services_card-text {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.services_btn {
+  display: inline-block;
+  margin-top: auto; /* Para empujar el botón hacia abajo */
+  background-color: #023766; /* Color del botón */
+  border: none;
+  padding: 5px 10px; /* Tamaño reducido del botón */
+}
+
+.services_btn:hover {
+  background-color:#27CFEC; /* Color del botón al pasar el ratón */
+}
+    /* Estilos para la tarjeta de anuncio */
+    .card-announcement {
+      position: absolute;
+      bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+      right: 20px; /* Ajusta la distancia desde la derecha */
+      background-color: #ffffff; /* Fondo blanco */
+      color: #333333; /* Color del texto */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px; /* Ajusta el ancho según sea necesario */
+      z-index: 999; /* Asegura que esté por encima de otros elementos */
+    }
+
+    /* Estilos para el mensaje de motivación */
+    .motivation-message {
+      font-size: 18px; /* Tamaño de fuente */
+      margin-bottom: 15px; /* Espacio inferior */
+    }
+
+    /* Estilos para el botón de simulación de crédito */
+    .btn-floating {
+      display: inline-block;
+      background-color:#023766; /* Color de fondo del botón */
+      color: #ffffff; /* Color del texto */
+      padding: 10px 20px; /* Espaciado interno del botón */
+      font-size: 16px; /* Tamaño de fuente */
+      text-decoration: none; /* Quitar subrayado del texto */
+      border-radius: 25px; /* Borde redondeado */
+      transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    }
+
+    .btn-floating:hover {
+      background-color: #dbdee2;
+      text-decoration: none; /* Color de fondo al pasar el mouse */
+    }
+
+
+.custom_heading {
+  text-align: center; /* Centrar el título */
+  margin-bottom: 30px; /* Espacio inferior */
+  font-weight: bold; /* Texto en negrita */
+  transition: color 0.3s; /* Transición de color al pasar el cursor */
+}
+
+
+.testimonios_section {
+  background: #023766;
+  padding: 60px 0; /* Espaciado interno */
+}
+.testimonios_section .custom_heading {
+  color: #ffffff; /* Color blanco para el h2 */
+}
+.testimonios_section .custom_heading:hover{
+  color:#014d8f; /* Color blanco para el h2 */
+}
+.testimonios_section .custom_heading-text {
+  color: #ffffff !important; /* Color blanco para el párrafo */
+}
+.button-container .btn-primary {
+  background-color: #023766; /* Cambia el color de fondo del botón */
+  border-color:#023766; /* Cambia el color del borde del botón */
+  color: #ffffff; /* Cambia el color del texto del botón */
+}
+.button-container .btn-primary:hover {
+  background-color:#27CFEC; /* Cambia el color de fondo del botón al pasar el mouse */
+  border-color: #27CFEC; /* Cambia el color del borde del botón al pasar el mouse */
+  color: #ffffff; /* Cambia el color del texto del botón al pasar el mouse */
+}
+.testimonios_section .custom_heading {
+  text-align: center; /* Centrar el título */
+  margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.testimonios_section .custom_heading-text {
+  text-align: center; /* Centrar el texto */
+  color: #666; /* Color del texto */
+  font-size: 18px; /* Tamaño de fuente */
+  margin-bottom: 40px; /* Espaciado inferior */
+}
+
+.testimonios_container {
+  display: flex;
+  justify-content: space-around; /* Distribución de los testimonios */
+  flex-wrap: wrap; /* Permitir el ajuste en pantallas pequeñas */
+}
+
+.testimonio {
+  width: 300px; /* Ancho de cada testimonio */
+  background-color: #fff; /* Color de fondo */
+  border-radius: 8px; /* Borde redondeado */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 20px; /* Espaciado interno */
+  margin-bottom: 30px; /* Espaciado inferior */
+  text-align: center; /* Centra el contenido */
+}
+
+.testimonio img {
+  width: 100px; /* Tamaño de la imagen del avatar */
+  height: 100px;
+  border-radius: 45%; /* Forma circular para la imagen */
+  margin-bottom: 10px; /* Espaciado inferior */
+  display: block; /* Asegura que la imagen se muestre correctamente */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.testimonio .testimonio-text {
+  font-size: 16px; /* Tamaño de fuente */
+  color: #0d0c0c; /* Color del texto */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.testimonio .cliente-name {
+  font-style: italic; /* Estilo de fuente itálico */
+  color: #888; /* Color del texto */
+  margin-bottom: 0; /* Elimina el margen inferior */
+}
+
+.cliente-name .fas {
+  color: #ffc107; /* Color amarillo para las estrellas */
+  font-size: 14px; /* Tamaño de fuente de las estrellas */
+}
+/* Estilos para la sección "Nuestros Aliados" */
+.aliados_section {
+  background-color: #f8f9fa; /* Color de fondo de la sección */
+  padding: 30px; /* Espaciado interno */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 20px; /* Bordes redondeados */
+  margin-bottom: 50px; /* Espaciado inferior para separar de otras secciones */
+  overflow: hidden; /* Oculta el contenido que sobresalga del contenedor */
+}
+
+/* Estilos para las imágenes de los aliados */
+.aliados_container {
+  display: flex; /* Para utilizar flexbox */
+  justify-content: center; /* Centra horizontalmente las imágenes */
+  align-items: center; /* Centra verticalmente las imágenes */
+  flex-wrap: wrap; /* Permite que las imágenes se distribuyan en varias líneas si es necesario */
+}
+
+.aliados_container img {
+  max-width: 150px; /* Tamaño máximo de las imágenes */
+  margin: 20px; /* Espaciado entre las imágenes */
+  transition: transform 0.3s ease; /* Transición suave del efecto de sobresalir */
+}
+
+/* Efecto de sobresalir al pasar el cursor */
+.aliados_container img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+.aliados_section h2 {
+  text-align: center;
+  color: #333; /* Color inicial del texto */
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: color 0.3s; /* Transición suave del color */
+}
+
+/* Cambio de color al pasar el cursor */
+.aliados_section h2:hover {
+  color:  #023766; /* Color azul al pasar el cursor */
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 5px;
+    top: calc(-50% + 100px);
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: auto; /* Ajusta el ancho automáticamente */
+    left: 0;
+
+  }
+
+  .dropdown-menu a {
+    display: block;
+    color: #000000;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 50;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #ffffff;
+    color: #428bca;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+ 
+}
+
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 568px) {
+  .container {
+      padding: 0 10px;
+  }
+  
+  .slider-and-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .slide-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 120%;
+  }
+
+  .slide-item img {
+      width: 100%;
+      height: auto;
+  }
+
+  .slide-control {
+      font-size: 24px;
+      margin-top: -50px;
+  }
+
+  .slide-indicador {
+      display: flex;
+      justify-content: center;
+      margin-top: -90px;
+  }
+
+  .slide-circulo {
+      font-size: 18px;
+      margin: 0 5px;
+  }
+
+  .info-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -300px;
+  }
+
+  .info-card {
+      width: 100%;
+      margin-bottom: 1px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-right: 60px;
+    margin-right: -20px;
+  }
+
+  .info-card h3 {
+      font-size: 16px;
+  }
+
+  .info-card img {
+      width: 40px;
+      height: 40px;
+  }
+
+  .banner img {
+      width: 195%;
+      height: auto;
+      margin-top: -160px;
+      margin-left: -30px;
+  }
+  .our_services {
+
+    margin-top: -120px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .our_services {
+    padding: 60px 0;
+    background-color: #ffffff; /* Fondo gris suave */
+    background-image: url('../Img/fondoservicios.png'); /* Ruta de tu imagen de fondo */
+    background-size: 84%; /* Ajusta la imagen para cubrir toda la sección */
+    background-position: center; /* Centra la imagen en la sección */
+    background-repeat: no-repeat; /* Evita repetir la imagen */
+    margin-top: -25px;
+  }
+}
+
+
+@media (min-width: 1500px) {
+  .our_services {
+    background-size: 61%;
+
+  }
+  .service_section {
+    padding: 60px 0;
+    background-color: #ffffff; /* Fondo gris suave */
+    background-size: 60%; /* Ajusta la imagen para cubrir toda la sección */
+    margin-top: -60px;
+  }
+ 
+}

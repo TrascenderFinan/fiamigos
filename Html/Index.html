@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Fiamigo</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../Css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../Css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area sub_pages">
+    <header class="header_section">
+      <div class="navbar-container">
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="index.html">
+              <img src="../Img/logofiamigos2.jpg" alt="Logo de la empresa" class="logo_empresa">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <img src="../Img/menu.png" alt="Menú desplegable">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Sobrenosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="service.html" id="navbarDropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                    Servicios
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="creditopersonal.html">Créditos Personales</a></li>
+                    <li><a class="dropdown-item" href="creditopersonal.html">Créditos por Libranza</a></li>
+                    <!-- <li><a class="dropdown-item" href="creditopersonal.html">Créditos Personales</a></li> 
+                    <li><a class="dropdown-item" href="creditos_libranza.html">Créditos por Libranza</a></li>-->
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="mapa.html">Oficinas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Preguntas.html">Preguntas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Contact.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+  <section>
+    <div class="container">
+      <div class="slider-and-cards">
+        <div class="slide">
+          <div class="slide-inner">
+            <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+            <div class="slide-item">
+              <img src="../Img/slider1.jpg">
+            </div>
+            <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+              <img src="../Img/slider2.jpg">
+            </div>
+            <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+              <img src="../Img/slider1.jpg">
+            </div>
+            <label for="slide-3" class="slide-control prev control-1">‹</label>
+            <label for="slide-2" class="slide-control next control-1">›</label>
+            <label for="slide-1" class="slide-control prev control-2">‹</label>
+            <label for="slide-3" class="slide-control next control-2">›</label>
+            <label for="slide-2" class="slide-control prev control-3">‹</label>
+            <label for="slide-1" class="slide-control next control-3">›</label>
+            <ol class="slide-indicador">
+              <li>
+                <label for="slide-1" class="slide-circulo">•</label>
+              </li>
+              <li>
+                <label for="slide-2" class="slide-circulo">•</label>
+              </li>
+              <li>
+                <label for="slide-3" class="slide-circulo">•</label>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="info-cards">
+          <a href="../Html/pse.html" class="info-card horizontal info-link">
+            <div class="decorator"></div>
+            <h3>Zona de Pagos</h3>
+            <img src="../Img/pse.png" alt="PSE Logo" class="pse-logo">
+          </a>
+          <a href="../Html/Contact.html" class="info-card horizontal info-link">
+            <div class="decorator"></div>
+            <h3>Contacto</h3>
+            <img src="../Img/iconocontacto.png" alt="Contact Logo" class="lgo">
+          </a>
+          <a href="../Html/service.html" class="info-card horizontal info-link">
+            <div class="decorator"></div>
+            <h3>Créditos</h3>
+            <img src="../Img/iconocredito.png" alt="Creditos Logo" class="lo">
+          </a>
+          <div class="banner">
+            <a href="../Html/Simularcredito.html">
+              <img src="../Img/navs (1)-Photoroom.png" alt="Simular Crédito">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><br><br><br><br>
+  <!-- Section: Servicios -->
+  <section class="our_services layout_padding">
+    <div class="container">
+      <h2 class="services_heading">Nuestros Servicios</h2>
+      <!--<p class="services_motivation">Descubre cómo nuestros servicios pueden ayudarte a alcanzar tus objetivos
+        financieros y mejorar tu calidad de vida.</p>-->
+      <div class="services_card-deck">
+        <div class="services_card">
+          <div class="services_card-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="services_card-body">
+            <h5 class="services_card-title">Créditos Personales</h5>
+            <p class="services_card-text">Obtén un crédito personal con las mejores condiciones.</p>
+            <a href="creditopersonal.html" class="services_btn btn btn-primary">Más </a>
+          </div>
+        </div>
+        <div class="services_card">
+          <div class="services_card-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <div class="services_card-body">
+            <h5 class="services_card-title">Créditos por Libranza</h5>
+            <p class="services_card-text">Aprovecha los beneficios de nuestros créditos por libranza.</p>
+            <a href="creditolibranza.html" class="services_btn btn btn-primary">Más </a>
+          </div>
+        </div>
+
+        <!-- <div class="services_card">
+          <div class="services_card-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="services_card-body">
+            <h5 class="services_card-title">Créditos Hipotecarios</h5>
+            <p class="services_card-text">Financia la compra de tu vivienda con nosotros.</p>
+            <a href="#" class="services_btn btn btn-primary">Más </a>
+          </div>
+        </div> 
+
+        <div class="services_card">
+          <div class="services_card-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <div class="services_card-body">
+            <h5 class="services_card-title">Créditos Vehiculares</h5>
+            <p class="services_card-text">Consigue el auto de tus sueños con nuestras opciones de financiamiento.</p>
+            <a href="#" class="services_btn btn btn-primary">Más </a>
+          </div>
+        </div>
+        <div class="services_card">
+          <div class="services_card-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="services_card-body">
+            <h5 class="services_card-title">Créditos para Negocios</h5>
+            <p class="services_card-text">Impulsa tu negocio con nuestros créditos especializados.</p>
+            <a href="#" class="services_btn btn btn-primary">Más </a>
+          </div>
+        </div>
+        <div class="services_card">
+          <div class="services_card-icon">
+            <i class="fas fa-piggy-bank"></i>
+          </div>
+          <div class="services_card-body">
+            <h5 class="services_card-title">Ahorro e Inversiones</h5>
+            <p class="services_card-text">Aprovecha nuestras soluciones de ahorro e inversión.</p>
+            <a href="#" class="services_btn btn btn-primary">Más</a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+  <!-- </section>
+  <section class="service_section layout_padding">
+    <div class="container">
+      <h2 class="custom_heading">Noticias</h2>
+      <p class="custom_heading-text">
+        Encuentra las últimas noticias y novedades sobre nuestros servicios financieros.
+      </p>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="../Img/noticia1.png" alt="News Image">
+          <div class="card-body">
+            <h5 class="card-title">News one</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit</p>
+            <div class="button-container">
+              <a href="noticia.html" class="btn btn-primary">Leer más</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="../Img/noticia2.png" alt="News Image">
+          <div class="card-body">
+            <h5 class="card-title">News one</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet,
+              consectetur adipiscing elit</p>
+            <div class="button-container">
+              <a href="noticia.html" class="btn btn-primary">Leer más</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="../Img/noticia3.png" alt="News Image">
+          <div class="card-body">
+            <h5 class="card-title">News one</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit</p>
+            <div class="button-container">
+              <a href="noticia.html" class="btn btn-primary">Leer más</a>
+            </div>
+
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+  <div class="whatsapp_float">
+    <a href="https://wa.me/1234567890" target="_blank">
+      <img src="../Img/WhatsApp_icon.png" alt="WhatsApp Icon" class="whatsapp_icon">
+    </a>
+  </div>
+  <!---
+  <section class="testimonios_section layout_padding">
+    <div class="container">
+      <h2 class="custom_heading">Testimonios</h2>
+      <p class="custom_heading-text">
+        Lo que nuestros clientes dicen sobre nosotros.
+      </p>
+      <div class="testimonios_container">
+        <div class="testimonio">
+          <img src="../Img/testimonio.jpeg" alt="Avatar">
+          <div class="testimonio-text">
+            <p>"Excelente servicio, muy profesionales. Me ayudaron a obtener el crédito que necesitaba de manera
+              rápida."</p>
+            <p class="cliente-name">Juan Pérez <br><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          </div>
+        </div>
+        <div class="testimonio">
+          <img src="../Img/testimonio.jpeg" alt="Avatar">
+          <div class="testimonio-text">
+            <p>"Muy contento con los créditos ofrecidos, realmente se adaptaron a mis necesidades."</p>
+            <p class="cliente-name">María González <br><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          </div>
+        </div>
+        <div class="testimonio">
+          <img src="../Img/testimonio.jpeg" alt="Avatar">
+          <div class="testimonio-text">
+            <p>"Muy contento con los créditos ofrecidos, realmente se adaptaron a mis necesidades."</p>
+            <p class="cliente-name">Daniel Torres <br><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          </div>
+        </div>
+         Añadir más testimonios según sea necesario -->
+      </div>
+    </div>
+  </section>
+  <section class="aliados_section layout_padding">
+    <div class="container">
+      <h2 class="custom_heading">Nuestros Aliados</h2>
+        <div class="aliados_container reveal">
+        <div class="aliados_container">
+          <img src="../Img/pse.png" alt="Aliado 1">
+          <img src="../Img/Logo-Datacredito-Experian.png" alt="Aliado 2">
+          <img src="../Img/Logo-Puntored.png" alt="Aliado 2">
+          <img src="../Img/logosialia.jpg" alt="Aliado 2">
+          <img src="../Img/logotrascender-Photoroom.png" alt="Aliado 2">
+          <img src="../Img/coopavalco.png" alt="Aliado 2">
+          <!-- Agrega más imágenes de aliados aquí -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2025 Todos los derechos reservados por Fi-amigos SAS</p>
+        </div>
+        <div class="col-md-6">
+          <div class="footer_contact">
+            <ul>
+              <li><i class="fa fa-envelope"></i> contacto@fiamigos.com</li>
+              <li><i class="fa fa-phone"></i> 018000417878 </li>
+            </ul>
+          </div>
+          <div class="footer_social">
+            <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=61572142047156&locale=es_LA"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+              <!-- <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>-->
+              <li><a href="https://www.instagram.com/fiamigos?igsh=MWFmZm9jZXhzYmpqaw=="><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- JS scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="../Js/credito.js"></script>
+  <script src="../Js/carrusel.js"></script>
+  
+
+  <script>
+    window.addEventListener('scroll', revealOnScroll);
+
+    function revealOnScroll() {
+      var reveals = document.querySelectorAll('.reveal');
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 50;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('revealed');
+        } else {
+          reveals[i].classList.remove('revealed');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

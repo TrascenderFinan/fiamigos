@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Oficinas</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <link href="../Css/mapa.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../Css/responsive.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+  <div class="hero_area sub_pages">
+    <header class="header_section">
+      <div class="navbar-container">
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="index.html">
+              <img src="../Img/logofiamigos2.jpg" alt="Logo de la empresa" class="logo_empresa">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <img src="../Img/menu.png" alt="Menú desplegable">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Sobrenosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="service.html" id="navbarDropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                    Servicios
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="creditopersonal.html">Créditos Personales</a></li>
+                    <li><a class="dropdown-item" href="creditopersonal.html">Créditos por Libranza</a></li>
+                   <!---- <li><a class="dropdown-item" href="creditopersonal.html">Créditos Personales</a></li>
+                    <li><a class="dropdown-item" href="creditos_libranza.html">Créditos por Libranza</a></li>-->
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="mapa.html">Oficinas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Preguntas.html">Preguntas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Contact.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <div class="container mt-5 custom_margin_top" >
+    <h1 class="text-center mb-4">Consulta Nuestras Principales Sedes en el País</h1>
+    <ul class="city-list">
+      <li data-lat="10.39972" data-lng="-75.51444" data-sede="sede-bolivar">Cartagena</li>
+      <li data-lat="10.477" data-lng="-73.2438" data-sede="sede-cesar">Valledupar</li>
+      <li data-lat="2.9273" data-lng="-75.2819" data-sede="sede-huila">Neiva</li>
+      <li data-lat="11.2412" data-lng="-74.211" data-sede="sede-magdalena">Magdalena</li>
+      <li data-lat="7.9075" data-lng="-72.5048" data-sede="sede-norte">Cúcuta</li>
+      <li data-lat="7.12261" data-lng="-73.121" data-sede="sede-santander">Barrancabermeja</li>
+      <li data-lat="3.43722" data-lng="-76.5225" data-sede="sede-valle">Cali</li>
+    </ul>
+    <div class="map-container">
+      <div id="map"></div>
+      <div class="sede-info">
+        <p class="text-center lead mb-4 initial-message" style="font-size: 22px;">
+          ¡Haz clic en una sede para obtener más información sobre la agencia, su ubicación y horarios de atención!
+          <img src="../Img/men.png" alt="Mensaje inicial" class="img-fluid">
+        </p>
+   
+        <div id="sede-santander" class="sede">
+          <h2>Santander</h2>
+          <h3>Barrancabermeja</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Calle 50 # 8 - 104 local 138 edifico City Center </p>
+          <p><i class="fas fa-phone"></i> (607) 6010144</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes 7:00 A.M a 12:00 M - 1:30 P.M a 5:00 P.M Sábados 8:00 A.M a 12:30 P.M</p>
+        </div>
+      
+        <div id="sede-bolivar" class="sede">
+          <h2>Bolívar</h2>
+          <h3>Cartagena </h3>
+          <p><i class="fas fa-map-marker-alt"></i>  Diagonal 31A #69-70, Centro Comercial Santa Lucia, Local 5</p>
+          <p><i class="fas fa-phone"></i> (605) 6645102 - (605) 6645231</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes 7:00 A.M a 12:00 M - 1:30 P.M a 5:54 P.M</p>
+        </div>
+        <div id="sede-cesar" class="sede">
+          <h2>Cesar</h2>
+          <h3>Valledupar</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Carrera 7 #15 -53 Local 4 Barrio Centro</p>
+          <p><i class="fas fa-phone"></i> (605) 5808638</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes 7:00 A.M a 12:00 M - 1:30 P.M a 5:54 P.M</p>
+        </div>
+    
+     
+        <div id="sede-huila" class="sede">
+          <h2>Huila</h2>
+          <h3>Neiva</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Carrera 6 #6 – 22</p>
+          <p><i class="fas fa-phone"></i> (608) 8641113</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes 7:00 A.M a 12:00 M - 1:30 P.M a 5:54 P.M</p>
+        </div>
+        <div id="sede-magdalena" class="sede">
+          <h2>Magdalena</h2>
+          <h3>Ciénaga</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Calle 14 #13-04 Local 2</p>
+          <p><i class="fas fa-phone"></i> (605) 4240803</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes 8:00 A.M a 12:00 M - 1:00 P.M a 5:30 P.M Sábados 8:00 A.M a 12:30 P.M</p>
+          <h3>Santa Marta</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Carrera 5 # 23 - 125 Piso 2, Centro</p>
+          <p><i class="fas fa-phone"></i> (605) 4358267</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes 7:00 A.M a 12:00 M - 1:00 P.M a 5:24 P.M</p>
+        </div>
+        <div id="sede-norte" class="sede">
+          <h2>Norte de Santander</h2>
+          <h3>Cúcuta</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Calle 11 Avenida 3, Centro Comercial Arcada Berti Local 8</p>
+          <p><i class="fas fa-phone"></i> (607) 5722573 - (607) 5955964</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes 7:00 A.M a 12:00 M - 1:30 P.M a 5:54 P.M</p>
+        </div>
+        
+       
+      
+        <div id="sede-valle" class="sede">
+          <h2>Valle del Cauca</h2>
+          <h3>Cali</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Calle 10#5–23 Edificio Martha Cecilia Oficina 201</p>
+          <p><i class="fas fa-phone"></i> (602) 4862721</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes 8:00 A.M a 12:00 M - 1:00 P.M a 5:30 P.M Sábados 8:00 A.M a 12:30 P.M</p>
+        </div>      
+      </div>
+    </div>
+  </div>
+  </div>
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2025 Todos los derechos reservados por Fi-amigos SAS</p>
+        </div>
+        <div class="col-md-6">
+          <div class="footer_contact">
+            <ul>
+              <li><i class="fa fa-envelope"></i> contacto@fiamigos.com</li>
+              <li><i class="fa fa-phone"></i> 018000417878 </li>
+            </ul>
+          </div>
+          <div class="footer_social">
+            <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=61572142047156&locale=es_LA"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+              <!-- <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>-->
+              <li><a href="https://www.instagram.com/fiamigos?igsh=MWFmZm9jZXhzYmpqaw=="><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="../Js/mapa2.js"></script>
+  <script>
+    // Inicializar el mapa
+    var map = L.map('map').setView([4.60971, -74.08175], 6);
+
+    // Agregar la capa base de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Crear un ícono personalizado para el marcador de ubicación inicial
+    var locationIcon = L.icon({
+      iconUrl: '../Img/logofiamigos2.jpg', // Ruta al ícono de ubicación personalizado
+      iconSize: [80, 20], // Tamaño del ícono
+      iconAnchor: [10, 70], // Ajustar hacia la izquierda (10px) y hacia abajo (40px)
+      popupAnchor: [0, -70] // Ajustar hacia arriba (30px)
+    });
+
+
+    // Añadir marcador de ubicación inicial con ícono personalizado al lado del logo en el mensaje inicial
+    var initialMarker = L.marker([4.60971, -74.08175], { icon: locationIcon }).addTo(map).bindPopup('Ubicación inicial');
+
+    // Coordenadas y datos de cada sede
+    var sedes = [
+
+
+      { lat: 10.39972, lng: -75.51444, sede: 'sede-bolivar', nombre: 'Bolívar' },
+      { lat: 10.477, lng: -73.2438, sede: 'sede-cesar', nombre: 'Cesar' },
+      { lat: 2.9273, lng: -75.2819, sede: 'sede-huila', nombre: 'Huila' },
+      { lat: 11.2412, lng: -74.211, sede: 'sede-magdalena', nombre: 'Magdalena' },
+      { lat: 7.9075, lng: -72.5048, sede: 'sede-norte', nombre: 'Norte de Santander' },
+      { lat: 7.12261, lng: -73.121, sede: 'sede-santander', nombre: 'Santander' },
+      { lat: 3.43722, lng: -76.5225, sede: 'sede-valle', nombre: 'Valle del Cauca' }
+    ];
+
+    // Añadir marcadores para cada sede con el ícono predeterminado (marcador azul de Leaflet)
+    sedes.forEach(function (sede) {
+      // Marcador predeterminado de Leaflet (azul)
+      var defaultMarker = L.marker([sede.lat, sede.lng]).addTo(map).bindPopup(sede.nombre);
+
+      // Marcador personalizado (logo) en cada sede
+      var customMarker = L.marker([sede.lat, sede.lng], { icon: locationIcon }).addTo(map).bindPopup('Ubicación: ' + sede.nombre);
+    });
+
+    // Cambiar la ubicación del mapa y el marcador al hacer clic en una ciudad
+    document.querySelectorAll('.city-list li').forEach(function (city) {
+      city.addEventListener('click', function () {
+        var lat = parseFloat(this.dataset.lat);
+        var lng = parseFloat(this.dataset.lng);
+        var sede = this.dataset.sede;
+
+        // Mover el mapa a la nueva ubicación
+        map.setView([lat, lng], 12);
+
+        // Mostrar información de la sede correspondiente
+        document.querySelectorAll('.sede').forEach(function (sedeDiv) {
+          sedeDiv.style.display = 'none';
+        });
+        document.getElementById(sede).style.display = 'block';
+
+        // Ocultar el mensaje inicial
+        document.querySelector('.initial-message').style.display = 'none';
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

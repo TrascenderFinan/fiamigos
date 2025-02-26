@@ -1,0 +1,339 @@
+
+.container {
+  max-width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+  color: #2e2e2d;
+}
+
+.navbar-brand img {
+  width: 45px;
+  margin-right: 5px;
+}
+
+.navbar-brand span {
+  font-size: 20px;
+  font-weight: 700;
+  color: inherit;
+  margin-top: 5px;
+}
+.header_section {
+  background-color: #052E64; /* Fondo para toda la sección del encabezado */
+}
+
+.navbar-brand img.logo_empresa {
+  width: 400px; /* Ajusta el ancho del logo */
+  height: auto; /* Mantén la proporción del logo */
+  margin-right: 10px;
+}
+
+.navbar-toggler {
+  background-color: transparent; /* Botón de menú transparente */
+  border: none; /* Sin borde */
+}
+
+.navbar-toggler img {
+  width: 30px; /* Tamaño de la imagen del menú */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff !important; /* Color del texto */
+  font-size: 18px;
+  padding: 0; /* Elimina padding extra */
+  margin: 0 15px; /* Espaciado entre elementos */
+  line-height: 40px; /* Asegura que los elementos estén centrados verticalmente */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #27CFEC !important; /* Color del texto al pasar el cursor */
+}
+
+/* Estilos para el logo dentro del enlace "Pagos Pse" */
+.navbar-nav .nav-item .nav-link img {
+  width: 40px; /* Tamaño del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Alinear elementos de la barra de navegación */
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Espacio entre elementos */
+  display: flex;
+  align-items: center;
+  position: relative; /* Asegura que los seudoelementos estén posicionados correctamente */
+}
+
+.navbar-nav .nav-item::after {
+  content: "|"; /* Contenido del seudoelemento */
+  position: absolute; /* Posición absoluta respecto al elemento padre */
+  top: 50%; /* Alineación vertical centrada */
+  right: -8px; /* Ajuste de posición para la línea vertical */
+  transform: translateY(-50%); /* Centrado vertical */
+  color: #ffffff; /* Color de la línea */
+}
+
+/* Ajuste para el último elemento */
+.navbar-nav .nav-item:last-child::after {
+  display: none; /* Oculta la línea vertical en el último elemento */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* Color de fondo del menú */
+  padding: 5px;
+  left: -10px; /* Ajusta la posición del menú hacia la izquierda */
+  top: calc(70% + 10px); /* Ajusta la posición del menú hacia abajo */
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #060606; /* Color de texto */
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 14px; /* Ajusta el tamaño del texto */
+  z-index: 50;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ffffff; /* Color de fondo al pasar el cursor */
+  color:#27CFEC; /* Cambia el color del texto al pasar el cursor */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+h1 {
+  color: #080808;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: -30px;
+  font-family: "Poppins", sans-serif;
+}
+
+h2, h3 {
+  color: #023766;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -30px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-lg-4, .col-lg-8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.city-list {
+  list-style-type: none;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-left: 120px;
+}
+
+.city-list li {
+  display: inline-block;
+  margin: 5px;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.lead {
+  font-size: 1.0rem;
+  color: #023766;
+  font-weight: bold;
+}
+
+.city-list li:hover {
+  color: #115d9f;
+  background-color: #f0f0f0;
+}
+
+#map {
+  height: 500px;
+  width: calc(75% - 75px);
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  float: left;
+  margin-bottom: 30px;
+}
+
+.sede-info {
+  margin-top: 20px;
+  width: 300px;
+  margin-left: 20px;
+  float: left;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.initial-message {
+  font-size: 20px;
+  color: #555;
+}
+
+.sede {
+  display: none;
+}
+
+.sede h2 {
+  margin-top: 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sede p {
+  margin: 0;
+  font-size: 20px;
+
+}
+
+.sede h3 {
+  margin-top: 10px;
+  font-size: 23px;
+}
+.container {
+  margin-top: 20px;
+}
+
+.footer_section {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 50px 0px; /* Agregar más padding horizontal */
+  clear: both;
+  width: 100%;
+  height: 190px; /* Ancho igual al 100% de la pantalla */
+}
+
+.footer_section p {
+  margin: 0;
+}
+
+
+.footer_contact ul, .footer_social ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer_contact ul li, .footer_social ul li {
+  margin-bottom: 10px;
+}
+
+.footer_social ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer_social ul li a {
+  color: #ffffff;
+}
+
+.footer_social ul li a:hover {
+  color: #428bca;
+}
+
+
+@media (max-width: 500px) {
+  #map {
+    display: none; /* Oculta el mapa en dispositivos pequeños */
+  }
+  
+  .sede-info {
+    display: block; 
+    position: relative;/* Muestra la información de las sedes */
+    width: 90%; /* Ajusta el ancho para dispositivos móviles */
+    float: none;
+    left: -90%;
+    margin-top: 100px; /* Elimina el flotado */
+  }
+}
+
+@media (max-width: 768px) {
+  #map {
+    display: block;
+    position: relative;
+    margin-top: 400px; 
+    width: 100%;/* Oculta el mapa en dispositivos pequeños */
+  }
+  
+  .sede-info {
+    display: block; 
+    position: relative;/* Muestra la información de las sedes */
+    width: 90%; /* Ajusta el ancho para dispositivos móviles */
+    float: none;
+    left: -90%;
+    margin-top: 100px; /* Elimina el flotado */
+  }
+  .city-list {
+    list-style-type: none;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+  
+  .city-list li {
+    display: inline-block;
+    margin: 5px;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+  }
+}
+
+@media screen and (min-width: 1600px) {
+ 
+
+}
+
