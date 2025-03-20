@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
   <link href="../Css/mapa.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../Css/responsive.css">
+  <link rel="stylesheet" href="Css/responsive.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
@@ -26,11 +26,11 @@
         <div class="container">
           <nav class="navbar navbar-expand-md navbar-dark">
             <a class="navbar-brand" href="index.html">
-              <img src="../Img/logofiamigos2.jpg" alt="Logo de la empresa" class="logo_empresa">
+              <img src="Img/logofiamigos2.jpg" alt="Logo de la empresa" class="logo_empresa">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <img src="../Img/menu.png" alt="Menú desplegable">
+              <img src="Img/menu.png" alt="Menú desplegable">
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
@@ -86,7 +86,7 @@
       <div class="sede-info">
         <p class="text-center lead mb-4 initial-message" style="font-size: 22px;">
           ¡Haz clic en una sede para obtener más información sobre la agencia, su ubicación y horarios de atención!
-          <img src="../Img/men.png" alt="Mensaje inicial" class="img-fluid">
+          <img src="Img/men.png" alt="Mensaje inicial" class="img-fluid">
         </p>
    
         <div id="sede-santander" class="sede">
@@ -181,7 +181,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="../Js/mapa2.js"></script>
+  <script src="Js/mapa2.js"></script>
   <script>
     // Inicializar el mapa
     var map = L.map('map').setView([4.60971, -74.08175], 6);
@@ -193,7 +193,7 @@
 
     // Crear un ícono personalizado para el marcador de ubicación inicial
     var locationIcon = L.icon({
-      iconUrl: '../Img/logofiamigos2.jpg', // Ruta al ícono de ubicación personalizado
+      iconUrl: 'Img/logofiamigos2.jpg', // Ruta al ícono de ubicación personalizado
       iconSize: [80, 20], // Tamaño del ícono
       iconAnchor: [10, 70], // Ajustar hacia la izquierda (10px) y hacia abajo (40px)
       popupAnchor: [0, -70] // Ajustar hacia arriba (30px)
