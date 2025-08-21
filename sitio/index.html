@@ -23,6 +23,21 @@
   <link href="Css/responsive.css" rel="stylesheet" />
 
 </head>
+<script>
+  let currentSlide = 1;
+  const totalSlides = 4; // cantidad total de imágenes
+
+  setInterval(() => {
+    // desmarcar el slide actual
+    document.getElementById(`slide-${currentSlide}`).checked = false;
+
+    // calcular el siguiente
+    currentSlide = currentSlide % totalSlides + 1;
+
+    // marcar el siguiente slide
+    document.getElementById(`slide-${currentSlide}`).checked = true;
+  }, 5000); // cambia cada 5 segundos
+</script>
 
 <body>
   <div class="hero_area sub_pages">
