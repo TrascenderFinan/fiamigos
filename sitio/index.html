@@ -80,46 +80,56 @@
   <section>
     <div class="container">
       <div class="slider-and-cards">
-        <div class="slide">
-          <div class="slide-inner">
-            <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
-            <div class="slide-item">
-              <img src="Img/abuelos.jpg">
-            </div>
-            <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
-            <div class="slide-item">
-              <img src="Img/pensionado.jpg">
-            </div>
-            <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
-            <div class="slide-item">
-              <img src="Img/contratista.jpg">  
-            </div>
-            <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
-            <div class="slide-item">
-              <img src="Img/senora.jpg">  
-            </div>
+        
+       <div class="slide">
+  <div class="slide-inner">
+    <!-- Slide 1 -->
+    <input class="slide-open" type="radio" id="slide-1" name="slide" hidden checked>
+    <div class="slide-item">
+      <img src="Img/abuelos.jpg" alt="Slide 1">
+    </div>
 
+    <!-- Slide 2 -->
+    <input class="slide-open" type="radio" id="slide-2" name="slide" hidden>
+    <div class="slide-item">
+      <img src="Img/pensionado.jpg" alt="Slide 2">
+    </div>
 
-            
-            <label for="slide-3" class="slide-control prev control-1">‹</label>
-            <label for="slide-2" class="slide-control next control-1">›</label>
-            <label for="slide-1" class="slide-control prev control-2">‹</label>
-            <label for="slide-3" class="slide-control next control-2">›</label>
-            <label for="slide-2" class="slide-control prev control-3">‹</label>
-            <label for="slide-1" class="slide-control next control-3">›</label>
-            <ol class="slide-indicador">
-              <li>
-                <label for="slide-1" class="slide-circulo">•</label>
-              </li>
-              <li>
-                <label for="slide-2" class="slide-circulo">•</label>
-              </li>
-              <li>
-                <label for="slide-3" class="slide-circulo">•</label>
-              </li>
-            </ol>
-          </div>
-        </div>
+    <!-- Slide 3 -->
+    <input class="slide-open" type="radio" id="slide-3" name="slide" hidden>
+    <div class="slide-item">
+      <img src="Img/contratista.jpg" alt="Slide 3">
+    </div>
+
+    <!-- Slide 4 (antes estaba duplicado como slide-3) -->
+    <input class="slide-open" type="radio" id="slide-4" name="slide" hidden>
+    <div class="slide-item">
+      <img src="Img/senora.jpg" alt="Slide 4">
+    </div>
+
+    <!-- Controles (prev/next) para cada slide -->
+    <label for="slide-4" class="slide-control prev control-1">‹</label>
+    <label for="slide-2" class="slide-control next control-1">›</label>
+
+    <label for="slide-1" class="slide-control prev control-2">‹</label>
+    <label for="slide-3" class="slide-control next control-2">›</label>
+
+    <label for="slide-2" class="slide-control prev control-3">‹</label>
+    <label for="slide-4" class="slide-control next control-3">›</label>
+
+    <label for="slide-3" class="slide-control prev control-4">‹</label>
+    <label for="slide-1" class="slide-control next control-4">›</label>
+
+    <!-- Indicadores -->
+    <ol class="slide-indicador">
+      <li><label for="slide-1" class="slide-circulo">•</label></li>
+      <li><label for="slide-2" class="slide-circulo">•</label></li>
+      <li><label for="slide-3" class="slide-circulo">•</label></li>
+      <li><label for="slide-4" class="slide-circulo">•</label></li>
+    </ol>
+  </div>
+</div>
+
         <div class="info-cards">
   <div class="info-card horizontal double-card">
     <a href="https://micrositios.avalpaycenter.com/trascender-financiero-fi-ami-mc/login" class="info-link">
