@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto</title>
 
-  <!-- CSS dependencies -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-  <link href="Css/services.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <link href="Css/services.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="icon" type="image/png" href="Img/logofiamigos2.png" />
 </head>
 
@@ -22,24 +22,18 @@
           <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark">
               <a class="navbar-brand" href="index.html">
-                <img src="Img/logofiamigos2.jpg" alt="Logo de la empresa" class="logo_empresa">
+                <img src="Img/logofiamigos2.jpg" alt="Logo de la empresa" class="logo_empresa" />
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="Img/menu.png" alt="Menú desplegable">
+                <img src="Img/menu.png" alt="Menú desplegable" />
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="Sobrenosotros.html">Nosotros</a>
-                  </li>
+                  <li class="nav-item active"><a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="Sobrenosotros.html">Nosotros</a></li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link" href="service.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                      Servicios
-                    </a>
+                    <a class="nav-link" href="service.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Servicios</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="creditopersonal.html">Créditos Personales</a></li>
                       <li><a class="dropdown-item" href="creditolibranza.html">Créditos por Libranza</a></li>
@@ -68,15 +62,15 @@
               <form id="contactForm" novalidate>
                 <div class="form-group">
                   <label for="name">Nombre</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre" required>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre" required />
                 </div>
                 <div class="form-group">
                   <label for="email">Correo Electrónico</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Tu Correo Electrónico" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Tu Correo Electrónico" required />
                 </div>
                 <div class="form-group">
                   <label for="subject">Asunto</label>
-                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required />
                 </div>
                 <div class="form-group">
                   <label for="message">Mensaje</label>
@@ -104,7 +98,7 @@
           <div class="footer_contact">
             <ul>
               <li><i class="fa fa-envelope"></i>contacto@fiamigos.com</li>
-              <li><i class="fa fa-phone"></i>018000417878 </li>
+              <li><i class="fa fa-phone"></i>018000417878</li>
             </ul>
           </div>
           <div class="footer_social">
@@ -123,8 +117,10 @@
     // Menú desplegable
     const dropdown = document.querySelector('.nav-item.dropdown');
     const dropdownMenu = document.querySelector('.dropdown-menu');
-    dropdown.addEventListener('mouseover', () => dropdownMenu.style.display = 'block');
-    dropdown.addEventListener('mouseout',  () => dropdownMenu.style.display = 'none');
+    if (dropdown && dropdownMenu) {
+      dropdown.addEventListener('mouseover', () => (dropdownMenu.style.display = 'block'));
+      dropdown.addEventListener('mouseout', () => (dropdownMenu.style.display = 'none'));
+    }
   </script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
@@ -134,26 +130,39 @@
 
   <!-- SCRIPT DE ENVÍO -->
   <script>
+    // Endpoint de API Gateway (POST /contact)
     const API_URL = 'https://nxcd3c2148.execute-api.us-east-1.amazonaws.com/contact';
 
+    // Referencias
     const f = document.getElementById('contactForm');
     const alertBox = document.getElementById('formAlert');
     const btn = document.getElementById('sendBtn');
 
+    // Helper para alertas
     function show(type, msg) {
       alertBox.className = `alert alert-${type}`;
       alertBox.textContent = msg;
       alertBox.classList.remove('d-none');
     }
 
+    // Asegura que el script se enganche (debug útil)
+    console.log('Formulario de contacto listo ✅', !!f);
+
+    // Envío del formulario
     f.addEventListener('submit', async (e) => {
-      e.preventDefault();
+      e.preventDefault(); // evita recarga
 
-      // Validación simple del navegador
-      if (!f.checkValidity()) { f.reportValidity(); return; }
+      // Validación nativa
+      if (!f.checkValidity()) {
+        f.reportValidity();
+        return;
+      }
 
-      btn.disabled = true; btn.textContent = 'Enviando...';
+      // Deshabilitar botón
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
 
+      // Cuerpo de la petición
       const body = {
         name: document.getElementById('name').value.trim(),
         email: document.getElementById('email').value.trim(),
@@ -167,18 +176,24 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(body)
         });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
+
+        if (!res.ok) {
+          const txt = await res.text().catch(() => '');
+          throw new Error(`HTTP ${res.status} ${txt}`);
+        }
 
         show('success', '¡Mensaje enviado! Te contactaremos pronto.');
         f.reset();
       } catch (err) {
-        console.error(err);
+        console.error('Error al enviar:', err);
         show('danger', 'No fue posible enviar el mensaje. Intenta más tarde.');
       } finally {
-        btn.disabled = false; btn.textContent = 'Enviar';
+        btn.disabled = false;
+        btn.textContent = 'Enviar';
       }
     });
   </script>
 </body>
 </html>
+
 
